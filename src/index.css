@@ -1,26 +1,76 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --yellow-theme-background-color: #1d1d1d;
-  --yellow-theme-main-color: #ffdd40;
-  --yellow-theme-sub-text-color: #ffffff;
-  --yellow-theme-nav-background-color: #181818;
+.nav-link {
+  position: relative;
+  text-decoration: none;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: green;
+  transition: width 0.3s ease-in-out;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  scroll-behavior: smooth;
+.nav-link:hover::after {
+  width: 100%;
 }
-html {
-  font-size: 62.5px;
-  height: 100%;
+
+.about {
+  position: relative;
+  text-decoration: none;
 }
-body {
-  background: var(--yellow-theme-background-color);
-  height: 100%;
+.about::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: palevioletred;
+  transition: width 0.3s ease-in-out;
 }
-#root {
-  height: 100%;
+.about:hover::after {
+  width: 100%;
+}
+
+.contact {
+  position: relative;
+  text-decoration: none;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: rgb(58, 16, 184);
+  transition: width 0.3s ease-in-out;
+}
+.contact:hover::after {
+  width: 100%;
+}
+
+.git {
+  position: relative;
+  text-decoration: none;
+}
+.git::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -10px;
+  left: 0;
+  background-color: chartreuse;
+  transition: width 0.3s ease-in-out;
+}
+.git:hover::after {
+  width: 100%;
 }
