@@ -8,7 +8,7 @@ const Home = () => {
         <div className="px-4 py-5 my-5 text-center">
           <img
             className="d-block mx-auto mb-4"
-            src="/public/rl-01.webp"
+            src="rl-01.webp"
             alt=""
             width="72"
             height="57"

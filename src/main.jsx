@@ -19,24 +19,16 @@ import Contact from "./Container/Contact/Index.jsx";
 import Home from "./Container/Home/Home.jsx";
 import Skills from "./Container/Skills/Index.jsx";
 import Github, { githubInfoLoader } from "./Container/Github/Github.jsx";
-import FacebookPageInfo, {
-  FacebookPageloader,
-} from "./Container/FacebookPageInfo/FacebookPageInfo.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="" element={<Home />} />
-      <Route path="portfolio" element={<Portfolio />} />
       <Route path="resume" element={<Resume />} />
       <Route path="skills" element={<Skills />} />
       <Route path="about" element={<About />} />
+      <Route path="portfolio" element={<Portfolio />} />
       <Route loader={githubInfoLoader} path="github" element={<Github />} />
-      <Route
-        loader={FacebookPageloader}
-        path="github"
-        element={<FacebookPageInfo />}
-      />
       <Route path="contact" element={<Contact />} />
     </Route>
   )
