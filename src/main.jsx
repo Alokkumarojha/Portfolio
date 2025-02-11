@@ -23,7 +23,8 @@ import Github, { githubInfoLoader } from "./Container/Github/Github.jsx";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route path="" element={<Home />} />
+      <Route index element={<Home />} />
+      <Route path="home" element={<Home />} />
       <Route path="resume" element={<Resume />} />
       <Route path="skills" element={<Skills />} />
       <Route path="about" element={<About />} />
